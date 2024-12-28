@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Tournament Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dashboard Page -->
+  <div id="dashboard-page" class="dashboard-container">
+    <h2>Fish Tournament Management</h2>
+    <div class="stats">
+      <p>Upcoming Tournament: <span id="tournament-name">N/A</span></p>
+      <p>Your Score: <span id="score">0</span></p>
+    </div>
+    <button id="submit-catch-btn">Submit Catch</button>
+    <button id="view-leaderboard-btn">View Leaderboard</button>
+  </div>
+
+  <!-- Catch Submission Form (Modal) -->
+  <div id="catch-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h2>Submit Your Catch</h2>
+      <form id="catch-form">
+        <div class="input-group">
+          <label for="fish-species">Fish Species</label>
+          <input type="text" id="fish-species" required>
+        </div>
+        <div class="input-group">
+          <label for="fish-weight">Weight (kg)</label>
+          <input type="number" id="fish-weight" step="0.1" required>
+        </div>
+        <div class="input-group">
+          <label for="fish-length">Length (cm)</label>
+          <input type="number" id="fish-length" required>
+        </div>
+        <button type="submit">Submit Catch</button>
+        <button type="button" id="close-modal-btn">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Leaderboard Page -->
+  <div id="leaderboard-page" class="leaderboard-container" style="display: none;">
+    <h2>Leaderboard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-table">
+        <!-- Leaderboard Entries will be populated here -->
+      </tbody>
+    </table>
+    <button id="back-to-dashboard-btn">Back to Dashboard</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
